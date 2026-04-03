@@ -1,52 +1,98 @@
-# Hi, I'm Musee Mengsteab 👋
+# Hi, I'm Musee Mengsteab.G 👋
 
 > 3rd-year Computer Science student specialising in **Embedded Systems**  
-> Passionate about firmware, microcontrollers, and writing software that speaks directly to hardware.
+> Building bare-metal firmware and bridging hardware with software using C and Python.
 
 ---
 
 ## About me
 
-I'm studying Computer Science with a focus on Embedded Systems, diving deep into how hardware and software interact at the lowest level. I enjoy understanding what's really happening inside a microcontroller — registers, interrupts, memory — not just using libraries that hide it.
+I'm a Computer Science student focused on Embedded Systems, working close to the hardware level — registers, interrupts, and memory — to understand how systems really work.
 
-- 🎓 &nbsp;CS student, Embedded Systems track — Year 3
-- 🔧 &nbsp;Currently building bare-metal firmware projects to sharpen my low-level C skills
-- 📡 &nbsp;Learning: RTOS fundamentals, communication protocols (UART, SPI, I2C), and ARM Cortex-M architecture
-- 💬 &nbsp;Ask me about: C/C++/python, microcontrollers, interrupt handling, or embedded debugging
-- 🌍 &nbsp;Open to internships and embedded systems projects
+Recently, I've been building complete embedded systems from scratch, including drivers, communication interfaces, and simple UI systems using real STM32 hardware.
 
----
-
-## Languages & Tools
-
-![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-004482?style=flat-square&logo=cplusplus&logoColor=white)
-![ROS2](https://img.shields.io/badge/ROS2-22314E?style=flat-square&logo=ros&logoColor=white)
-![ARM](https://img.shields.io/badge/ARM_Cortex--M-0091BD?style=flat-square&logo=arm&logoColor=white)
-![STM32](https://img.shields.io/badge/STM32-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+- 🎓 CS student — Embedded Systems (Year 3)
+- 🔧 Building **bare-metal firmware (no HAL) on STM32**
+- 📡 Working with **UART, GPIO, LCD interfaces**
+- 🐍 Integrating embedded systems with **Python (serial communication & data visualization)**
+- 🧠 Currently learning: **FreeRTOS, system design, and real-time debugging**
+- 🌍 Open to internships and embedded systems roles
 
 ---
 
-## Projects
+## 🛠️ Core Skills
+
+- **Languages:** C, C++, Python  
+- **Embedded:** STM32 (ARM Cortex-M), Bare-metal programming, Register-level development  
+- **Protocols:** UART (implemented), SPI/I2C (learning)  
+- **Tools:** STM32CubeIDE, VS Code, Git, Linux  
+- **Concepts:** Interrupts, Memory-mapped I/O, Debugging, Real-time systems  
+
+---
+
+## 🚀 Projects
 
 ### ⚡ Bare-metal GPIO Driver — STM32F411RE
-> Personal project · Embedded Systems
+> Register-level driver with zero HAL dependencies
 
-Bare-metal GPIO driver library in C for the STM32F411RE with zero HAL dependencies. All pin configuration through direct register access — MODER, BSRR, PUPDR — compiled with ARM GCC targeting Cortex-M4.
+- Direct manipulation of **MODER, BSRR, PUPDR registers**
+- Configurable pin modes and output control
+- Designed for portability and clarity
 
-**Stack:** C · STM32F411RE · ARM Cortex-M4 · STM32CubeIDE  
-🔗 [View repository](https://github.com/musee-00/stm32-gpio-driver)
+**Stack:** C · STM32F411RE · ARM Cortex-M4  
+🔗 https://github.com/musee-00/stm32-gpio-driver
+
+---
+
+### 📡 Bare-metal UART Driver — STM32
+> Serial communication between STM32 and MacBook
+
+- Implemented UART TX from scratch using registers
+- Sent real-time data from microcontroller to PC
+- Used for debugging and external communication
+
+**Stack:** C · UART · STM32 · Serial communication  
+
+---
+
+### 🖥️ LCD Interface + Counter System
+> Embedded UI system with real-time feedback
+
+- LCD displays counting loop (1 → 10 → -1)
+- LED triggers at max/min values
+- Demonstrates control logic + hardware interaction
+
+**Concepts:**
+- State-based logic
+- Hardware feedback systems
+- Embedded UI basics
+
+---
+
+### 🐍 STM32 ↔ Python Serial Monitor (in progress)
+> Bridging embedded systems with high-level software
+
+- Reading UART data using Python (`pyserial`)
+- Planned: real-time plotting + logging
 
 ---
 
 ### 🗺️ LiDAR Mapping Controller — ROS2
-> Group project · Embedded Systems course
+> Group project
 
-Mapping controller system using ROS2 and a LiDAR sensor. The system processes point cloud data to map an environment in real time, with a custom controller node managing sensor input and publishing occupancy data to the ROS2 topic graph.
+- Built controller node for LiDAR-based mapping
+- Processed point cloud data and published occupancy maps
 
-**Stack:** ROS2 (C++/Python) · LiDAR · SLAM concepts · Ubuntu/Linux
+**Stack:** ROS2 · C++/Python · SLAM · Linux  
+
+---
+
+## 📈 What I'm Working Towards
+
+- 🔄 RTOS-based multi-tasking systems (FreeRTOS)
+- 📊 Real-time data visualization from embedded devices
+- 🧰 Building reusable embedded drivers and tools
+- 🌐 Embedded + Python + UI integration
 
 ---
 
@@ -61,8 +107,8 @@ Mapping controller system using ROS2 and a LiDAR sensor. The system processes po
 
 ## Let's connect
 
-- 💼 &nbsp;Open to internships and embedded systems discussions
+- 💼 Open to internships and embedded systems opportunities
 
 ---
 
-<sub>Updated 2026 · Computer Science · Embedded Systems</sub>
+<sub>2026 · Embedded Systems · Building from registers up</sub>
