@@ -1,4 +1,4 @@
-# Hi, I'm Musee Mengsteab.G 👋
+# Hi, I'm Musee Mengsteab.G 
 
 > 3rd-year Computer Science student specialising in **Embedded Systems**  
 > Building bare-metal firmware and bridging hardware with software using C and Python.
@@ -11,16 +11,16 @@ I'm a Computer Science student focused on Embedded Systems, working close to the
 
 Recently, I've been building complete embedded systems from scratch, including drivers, communication interfaces, and simple UI systems using real STM32 hardware.
 
-- 🎓 CS student — Embedded Systems (Year 3)
-- 🔧 Building **bare-metal firmware (no HAL) on STM32**
-- 📡 Working with **UART, GPIO, LCD interfaces**
-- 🐍 Integrating embedded systems with **Python (serial communication & data visualization)**
-- 🧠 Currently learning: **FreeRTOS, system design, and real-time debugging**
-- 🌍 Open to internships and embedded systems roles
+-  CS student — Embedded Systems (Year 3)
+-  Building **bare-metal firmware (no HAL) on STM32**
+-  Working with **UART, GPIO, LCD interfaces**
+-  Integrating embedded systems with **Python (serial communication & data visualization)**
+-  Currently learning: **FreeRTOS, system design, and real-time debugging**
+-  Open to internships and embedded systems roles
 
 ---
 
-## 🛠️ Core Skills
+##  Core Skills
 
 - **Languages:** C, C++, Python  
 - **Embedded:** STM32 (ARM Cortex-M), Bare-metal programming, Register-level development  
@@ -30,9 +30,9 @@ Recently, I've been building complete embedded systems from scratch, including d
 
 ---
 
-## 🚀 Projects
+##  Projects
 
-### ⚡ Bare-metal GPIO Driver — STM32F411RE
+###  Bare-metal GPIO Driver — STM32F411RE
 > Register-level driver with zero HAL dependencies
 
 - Direct manipulation of **MODER, BSRR, PUPDR registers**
@@ -40,11 +40,11 @@ Recently, I've been building complete embedded systems from scratch, including d
 - Designed for portability and clarity
 
 **Stack:** C · STM32F411RE · ARM Cortex-M4  
-🔗 https://github.com/musee-00/stm32-gpio-driver
+https://github.com/musee-00/stm32-gpio-driver
 
 ---
 
-### 📡 Bare-metal UART Driver — STM32
+###  Bare-metal UART Driver — STM32
 > Serial communication between STM32 and MacBook
 
 - Implemented UART TX from scratch using registers
@@ -55,7 +55,7 @@ Recently, I've been building complete embedded systems from scratch, including d
 
 ---
 
-### 🖥️ LCD Interface + Counter System
+###  LCD Interface + Counter System
 > Embedded UI system with real-time feedback
 
 - LCD displays counting loop (1 → 10 → -1)
@@ -69,7 +69,7 @@ Recently, I've been building complete embedded systems from scratch, including d
 
 ---
 
-### 🐍 STM32 ↔ Python Serial Monitor (in progress)
+###  STM32 ↔ Python Serial Monitor (in progress)
 > Bridging embedded systems with high-level software
 
 - Reading UART data using Python (`pyserial`)
@@ -77,7 +77,7 @@ Recently, I've been building complete embedded systems from scratch, including d
 
 ---
 
-### 🗺️ LiDAR Mapping Controller — ROS2
+###  LiDAR Mapping Controller — ROS2
 > Group project
 
 - Built controller node for LiDAR-based mapping
@@ -87,12 +87,12 @@ Recently, I've been building complete embedded systems from scratch, including d
 
 ---
 
-## 📈 What I'm Working Towards
+##  What I'm Working Towards
 
-- 🔄 RTOS-based multi-tasking systems (FreeRTOS)
-- 📊 Real-time data visualization from embedded devices
-- 🧰 Building reusable embedded drivers and tools
-- 🌐 Embedded + Python + UI integration
+-  RTOS-based multi-tasking systems (FreeRTOS)
+-  Real-time data visualization from embedded devices
+-  Building reusable embedded drivers and tools
+-  Embedded + Python + UI integration
 
 ---
 
@@ -107,7 +107,7 @@ Recently, I've been building complete embedded systems from scratch, including d
 
 ## Let's connect
 
-- 💼 Open to internships and embedded systems opportunities
+-  Open to internships and embedded systems opportunities
 
 ---
 
