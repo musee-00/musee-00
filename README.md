@@ -30,6 +30,7 @@ Recently, I've been building complete embedded systems from scratch, including d
 
 ---
 
+
 ##  Projects
 
 ###  Bare-metal GPIO Driver — STM32F411RE
@@ -86,6 +87,16 @@ https://github.com/musee-00/stm32-gpio-driver
 **Stack:** ROS2 · C++/Python · SLAM · Linux  
 
 ---
+###  Todo Manager — C++ CLI
+> OOP and STL practice — command-line task manager
+
+- Task class with due dates, priority levels, and persistent file storage
+- Search, complete, and remove tasks via interactive menu
+- Color-coded terminal output
+
+**Stack:** C++ · STL · OOP · File I/O
+https://github.com/musee-00/todo-manager
+
 
 ##  What I'm Working Towards
 
