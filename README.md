@@ -24,12 +24,11 @@ Recently, I've been building complete embedded systems from scratch, including d
 
 - **Languages:** C, C++, Python  
 - **Embedded:** STM32 (ARM Cortex-M), Bare-metal programming, Register-level development  
-- **Protocols:** UART (implemented), SPI/I2C (learning)  
+- **Protocols:** UART (implemented), I2C (implemented), SPI (learning)  
 - **Tools:** STM32CubeIDE, VS Code, Git, Linux  
 - **Concepts:** Interrupts, Memory-mapped I/O, Debugging, Real-time systems  
 
 ---
-
 
 ##  Projects
 
@@ -37,8 +36,8 @@ Recently, I've been building complete embedded systems from scratch, including d
 > Register-level driver with zero HAL dependencies
 
 - Direct manipulation of **MODER, BSRR, PUPDR registers**
-- Configurable pin modes and output control
-- Designed for portability and clarity
+- Configurable pin modes, output type, pull-up/pull-down
+- Atomic pin set/reset using BSRR
 
 **Stack:** C · STM32F411RE · ARM Cortex-M4  
 https://github.com/musee-00/stm32-gpio-driver
@@ -49,32 +48,42 @@ https://github.com/musee-00/stm32-gpio-driver
 > Serial communication between STM32 and MacBook
 
 - Implemented UART TX from scratch using registers
-- Sent real-time data from microcontroller to PC
-- Used for debugging and external communication
+- Configured PA2 as AF7, set baud rate via BRR register
+- Sends real-time data to Mac over USB — no HAL
 
-**Stack:** C · UART · STM32 · Serial communication  
-
----
-
-###  LCD Interface + Counter System
-> Embedded UI system with real-time feedback
-
-- LCD displays counting loop (1 → 10 → -1)
-- LED triggers at max/min values
-- Demonstrates control logic + hardware interaction
-
-**Concepts:**
-- State-based logic
-- Hardware feedback systems
-- Embedded UI basics
+**Stack:** C · UART · STM32F411RE · Bare-metal  
+https://github.com/musee-00/stm32-uart-driver
 
 ---
 
-###  STM32 ↔ Python Serial Monitor (in progress)
-> Bridging embedded systems with high-level software
+###  STM32 Telemetry Dashboard — LCD + UART + Python
+> Full embedded pipeline: STM32 firmware → UART → Python → CSV log
 
-- Reading UART data using Python (`pyserial`)
-- Planned: real-time plotting + logging
+- STM32 streams counter data over UART at 9600 baud
+- I2C LCD displays live counter on PCF8574 backpack
+- Python reads serial data with `pyserial` and logs to CSV
+- LED triggers at min/max counter values
+
+**Stack:** C · Python · STM32F411RE · I2C · UART · pyserial  
+https://github.com/musee-00/stm32-telemetry-dashboard
+
+---
+
+###  PIR Alarm System — STM32
+> Motion-activated alarm with bare-metal register control
+
+- PIR sensor triggers LED blink sequence on motion detection
+- Full register-level GPIO control — no HAL dependencies
+- Buzzer output wired and ready — pending hardware replacement
+
+| Component | Pin |
+|-----------|-----|
+| PIR Signal | PA0 |
+| LED | PA1 |
+| Buzzer | PA2 |
+
+**Stack:** C · STM32F411RE · Bare-metal · STM32CubeIDE  
+https://github.com/musee-00/PIR_Alarm
 
 ---
 
@@ -87,26 +96,6 @@ https://github.com/musee-00/stm32-gpio-driver
 **Stack:** ROS2 · C++/Python · SLAM · Linux  
 
 ---
-###  PIR Alarm System — STM32
-> Motion-activated alarm with bare-metal register control
-
-- PIR sensor triggers LED blink sequence on motion detection
-- Buzzer alert output (hardware pending)
-- Full register-level GPIO control — no HAL dependencies
-
-**Wiring:**
-| Component | Nucleo Pin |
-|-----------|-----------|
-| PIR Signal | PA0 (A0) |
-| LED | PA1 (A1) |
-| Buzzer | PA2 (D1) |
-
-**Status:** PIR + LED working · Buzzer pending replacement
-
-**Stack:** C · STM32F411RE · Bare-metal · STM32CubeIDE
-https://github.com/musee-00/pir-alarm-system
-
-------
 
 ###  Todo Manager — C++ CLI
 > OOP and STL practice — command-line task manager
@@ -115,14 +104,15 @@ https://github.com/musee-00/pir-alarm-system
 - Search, complete, and remove tasks via interactive menu
 - Color-coded terminal output
 
-**Stack:** C++ · STL · OOP · File I/O
+**Stack:** C++ · STL · OOP · File I/O  
 https://github.com/musee-00/todo-manager
 
+---
 
 ##  What I'm Working Towards
 
 -  RTOS-based multi-tasking systems (FreeRTOS)
--  Real-time data visualization from embedded devices
+-  Real-time data visualization from embedded devices (matplotlib)
 -  Building reusable embedded drivers and tools
 -  Embedded + Python + UI integration
 
