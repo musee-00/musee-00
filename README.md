@@ -87,6 +87,27 @@ https://github.com/musee-00/stm32-gpio-driver
 **Stack:** ROS2 · C++/Python · SLAM · Linux  
 
 ---
+###  PIR Alarm System — STM32
+> Motion-activated alarm with bare-metal register control
+
+- PIR sensor triggers LED blink sequence on motion detection
+- Buzzer alert output (hardware pending)
+- Full register-level GPIO control — no HAL dependencies
+
+**Wiring:**
+| Component | Nucleo Pin |
+|-----------|-----------|
+| PIR Signal | PA0 (A0) |
+| LED | PA1 (A1) |
+| Buzzer | PA2 (D1) |
+
+**Status:** PIR + LED working · Buzzer pending replacement
+
+**Stack:** C · STM32F411RE · Bare-metal · STM32CubeIDE
+https://github.com/musee-00/pir-alarm-system
+
+------
+
 ###  Todo Manager — C++ CLI
 > OOP and STL practice — command-line task manager
 
