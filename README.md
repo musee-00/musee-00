@@ -72,20 +72,20 @@ https://github.com/musee-00/stm32-telemetry-dashboard
 ###  PIR Alarm System — STM32
 > Motion-activated alarm with bare-metal register control
 
-- PIR sensor triggers LED blink sequence on motion detection
-- Full register-level GPIO control — no HAL dependencies
-- Buzzer output wired and ready — pending hardware replacement
+- PIR sensor triggers LED and buzzer on motion detection
+- 5x fast blink/buzz pattern on motion event
+- UART logging sends `Motion detected!` and `No motion` over USB at 9600 baud
+- Full register-level GPIO and USART2 control — no HAL dependencies
 
 | Component | Pin |
 |-----------|-----|
 | PIR Signal | PA0 |
-| LED | PA1 |
-| Buzzer | PA2 |
+| LED + Buzzer | PA1 |
+| UART TX (log) | PA2 |
 
-**Stack:** C · STM32F411RE · Bare-metal · STM32CubeIDE  
-https://github.com/musee-00/PIR_Alarm
+**Stack:** C · STM32F411RE · Bare-metal · UART · STM32CubeIDE  
+https://github.com/musee-00/PIR_Alarm 
 
----
 
 ###  LiDAR Mapping Controller — ROS2
 > Group project
